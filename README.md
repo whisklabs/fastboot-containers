@@ -20,5 +20,6 @@ CONTAINER ID        IMAGE                COMMAND                  CREATED       
 
 Commit container
 ```bash
+docker stop 0d05ae55473f
 docker commit 0d05ae55473f quay.io/whisk/fastboot-mysql:5.7.19
 ```

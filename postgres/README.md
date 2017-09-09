@@ -23,5 +23,6 @@ CONTAINER ID        IMAGE                         COMMAND                  CREAT
 
 Commit container
 ```bash
+docker stop 17ef5b286c84
 docker commit 17ef5b286c84 quay.io/whisk/fastboot-postgres:9.6.5
 ```
