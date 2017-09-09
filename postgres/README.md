@@ -6,10 +6,10 @@ docker build -t fastboot-postgres-tmp:9.6.5 postgres/9.6/
 run test container
 
 ```bash
- docker run -e POSTGRES_DB=test \
-   -e POSTGRES_USER=test \
-   -e POSTGRES_PASSWORD=test \
-   fastboot-postgres-tmp:9.6.5 postgres
+docker run -e POSTGRES_DB=test \
+  -e POSTGRES_USER=test \
+  -e POSTGRES_PASSWORD=test \
+  fastboot-postgres-tmp:9.6.5 postgres
 ```
 
 wait till it finish the initialisation process
