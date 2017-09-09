@@ -17,11 +17,11 @@ wait till it finish the initialisation process
 ```bash
 docker ps
 
-CONTAINER ID        IMAGE                COMMAND                  CREATED              STATUS              PORTS                                                      NAMES
-0d05ae55473f        fastboot-mysql-tmp   "docker-entrypoint..."   About a minute ago   Up 59 seconds       3306/tcp                                                   gifted_nightingale
+CONTAINER ID        IMAGE                         COMMAND                  CREATED             STATUS              PORTS                                                      NAMES
+17ef5b286c84        fastboot-postgres-tmp:9.6.5   "docker-entrypoint..."   34 seconds ago      Up 32 seconds       5432/tcp                                                   unruffled_meninsky
 ```
 
 Commit container
 ```bash
-docker commit 0d05ae55473f quay.io/whisk/fastboot-postgres:9.6.5
+docker commit 17ef5b286c84 quay.io/whisk/fastboot-postgres:9.6.5
 ```
