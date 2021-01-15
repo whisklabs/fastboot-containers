@@ -10,7 +10,7 @@ RUN set -exu ;\
  MYSQL_ROOT_PASSWORD=test  docker-entrypoint.sh --datadir /var/lib/mysql-no-volume &\
  MYSQL_PID=$! &&\
  timeout 22 bash -c 'until printf "" 2>>/dev/null >>/dev/tcp/$0/$1; do sleep 1; done' localhost 3306 &&\
- mysql -ptest -e 'create database `test` collate "utf8mb4_unicode_ci"' &&\
+ mysql -ptest -e 'create database `test`' &&\
  kill $MYSQL_PID &&\
  tail --pid=$MYSQL_PID -f /dev/null # Using tail to wait for PID to end https://unix.stackexchange.com/questions/427115/listen-for-exit-of-process-given-pid
 
